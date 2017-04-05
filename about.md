@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Welcome to my site.
+Check out my [GitHub](http://github.com/duckot1) or send me an [email](mailto:tom.duckworth91@gmail.com).
