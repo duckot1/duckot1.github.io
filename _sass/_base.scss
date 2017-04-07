@@ -32,7 +32,7 @@ body {
     font-size: $body-font-size;
     line-height: 1.5;
     color: $color-body-text;
-    background-color: $color-background;
+    background-color: #fff;
 }
 
 p {
@@ -55,12 +55,110 @@ h6, .h6 { font-size: $h6-size; text-transform: uppercase; letter-spacing: 0.02em
 a {
   color: inherit;
   text-decoration: none;
-  padding-bottom: 1px;
-  border-bottom: 1px solid currentColor;
 }
 
 a:hover {
-  color: $color-primary-link;
-  text-decoration: none;
-  border-bottom: 1px dotted;
+  text-decoration: underline;
+}
+
+#big-title {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#big-description {
+  margin-bottom: 40px;
+  padding-bottom: 0px;
+  margin-top: 0px !important;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.project-container {
+  min-height: 250px;
+}
+
+#biodiv {
+  width: 850px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+#one {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+#two {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+#three {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+#four {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+.bio-block {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.bio-text {
+  margin-top: 10px;
+  font-size: 15px !important;
+  padding-top: 10px;
+  opacity: 1;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+//
+// .bio-heading {
+//   margin-top: 20px !important;
+// }
+
+#bio-pic {
+  max-width: 150px;
+  float: right;
+  border-radius: 150px;
+  margin-left: 50px;
+}
+
+#footer {
+  margin-top: 0px;
+}
+
+#main {
+  margin-bottom: 0px;
 }

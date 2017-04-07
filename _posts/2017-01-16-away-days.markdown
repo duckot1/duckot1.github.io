@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Away Days"
+date:   2017-01-15 09:56:36 +0000
+categories: project
+number: four
+---
+
+This is an app for premier league football fans who are looking to plan their next away fixture. The app allows you to choose the team you support, the team they will be facing and the date of the fixture. It will then return the location of the home teams stadium on a map along with details of the weather and the previous result. This was achieved using two external APIs (openweathermap and soccerama).
+
+Express | Gulp | JavaScript | jQuery | Mongo | Mongoose | AJAX | HTML5 | CSS3

@@ -15,7 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Tom Duckworth
 email: tom.duckworth@gmail.com
-description: > # This is a website.
+description: Web Developer
+bio: Until six months ago I was happily making a career out of the recruitment sector. I decided a change was necessary when I was introduced to coding by a friend and I found that I excelled at it, due to my ability to very quickly find answers to problems from other people.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: duckot1
@@ -23,12 +24,14 @@ github_username:  duckot1
 
 # Build settings
 markdown: kramdown
-theme: jekyll-athena
+theme: jekyll-swiss
+theme_color: black
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
 
 collections:
   projects:

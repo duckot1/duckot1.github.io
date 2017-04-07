@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Club Mate"
+date:   2017-02-15 09:56:36 +0000
+categories: project
+number: three
+---
+
+An app designed to bring people together through a shared interest in an event. My role in the project was mainly on the back end. I was in charge of server side authentication using BCrypt as well as implementing a request/accept system for the events. We worked well as a group, making sure to have regular stand-ups to discuss progress and what tasks we were working on.
+
+Express | Gulp | JavaScript | Mongo | Mongoose | HTML5 | CSS3 | AngularJS | BCrypt | JWT

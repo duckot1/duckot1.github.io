@@ -12,37 +12,15 @@
 
 .text-right { text-align: right; }
 
-.no-underline, .no-underline-hover {
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.no-underline-hover {
+.no-underline {
+  text-decoration: none !important;
 
   &:hover {
-    text-decoration: none !important;
-    border-bottom: none !important;
-  }
-}
-
-
-
-// Link styles for navigation
-.link-primary {
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 2px solid currentColor;
-  padding-bottom: 1px;
-
-  &:hover {
-    color: $color-primary-link;
-    text-decoration: none;
-    border-bottom: 2px dotted;
+    text-decoration: no-underline !important;
   }
 }
 
 .bold { font-weight: bold; }
-.italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
 
 .lh-condensed { line-height: 1.25; }
@@ -66,6 +44,7 @@
 .header-title { color: $color-title; }
 .header-text { color: $color-foreground; }
 .header-social { fill: $color-foreground; }
+.header-social-accent { fill: $color-dot-accent; }
 .header-link:hover { color: $color-nav-link !important; } // used for navigation links on homepage
 .text-accent { color: $color-text-accent; } // used for date in post list and home link
 
@@ -92,37 +71,10 @@
 .block        { display: block !important; }
 .inline-block { display: inline-block !important; }
 
-.absolute { position: absolute; }
-.fixed { position: fixed; }
-
-.top-0 { top: 0; }
-.right-0 { right: 0; }
-.left-0 { left: 0; }
-
 .table { display: table !important; }
 
 .left { float: left; }
 .right { float: right; }
-
-
-// Responsive layout
-
-@media (min-width: $breakpoint-lg) {
-
-  .right-lg { float: right !important; }
-  .left-lg { float: left !important; }
-
-  .absolute-lg { position: absolute; }
-
-  .block-lg { display: block !important; }
-  .inline-block-lg { display: inline-block; }
-
-}
-
-@media (max-width: $breakpoint-lg) {
-  .hide-sm { display: none !important; }
-}
-
 
 .clearfix:before,
 .clearfix:after {
@@ -178,7 +130,7 @@
 .ml-4 { margin-left: $spacer-4; }
 
 // Responsive margin
-@media (min-width: $breakpoint-lg) {
+@media (min-width: 52em) {
   .mx-lg-auto { margin-left: auto; margin-right: auto; }
 
   .mt-lg-0 { margin-top: 0; }
@@ -205,4 +157,26 @@
   .mr-lg-4 { margin-right: $spacer-4; }
   .mb-lg-4 { margin-bottom: $spacer-4; }
   .ml-lg-4 { margin-left: $spacer-4; }
+}
+
+// Link styles for social icons
+.link-social {
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Link styles for navigation
+.link-primary {
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary-link;
+    text-decoration: none;
+  }
 }

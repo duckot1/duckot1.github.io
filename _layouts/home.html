@@ -7,41 +7,189 @@
 
     <div>
 
-      <header class="clearfix">
+      <header class="header-background">
 
-        <div class="right absolute-lg right-0 top-0">
-          <ul class="mt-2 mr-2 mr-lg-3">
+        <div class="clearfix border-bottom-thick header-border">
+          <ul class="list-reset right py-1 header-text font-smoothing">
             {% for my_page in site.pages %}
               {% if my_page.title %}
-              <li class="inline-block block-lg text-right ml-1 ml-lg-0">
-                <a class="italic no-underline h4 font-smoothing" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+              <li class="inline-block">
+                <a class="align-middle link-primary header-link mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
               </li>
               {% endif %}
             {% endfor %}
           </ul>
         </div>
 
-        <div class="container mx-auto px-2 mt-4 mb-2 clearfix header-text">
-          <h1 class="h0 inline-block py-2 mt-4 header-title">{{ site.title }}</h1>
+        <div id="main" class="container mx-auto px-2 mb-2 clearfix header-text">
+          <h1 id="big-title" class="h1 inline-block col-9 sm-width-full py-4 mt-3 header-title">{{ site.title }}</h1>
+          <p id="big-description" class="h4 lh-condensed sm-width-full font-smoothing mt-2 py-1">{{ site.description }}</p>
+          <div class="bio-block project-container clearfix mb-4 py-1">
+            <div id="biodiv" class="bio-block clearfix mb-4 py-1">
+                {% include bio_block.html %}
+            </div>
+            {% for post in site.posts %}
+            <div id="{{ post.number }}" class="bio-block clearfix mb-4 py-1">
+              {% include post_block.html %}
+            </div>
+            {% endfor %}
+            <script type="text/javascript">
+              document.addEventListener("DOMContentLoaded", function(event) {
+                var about = document.getElementById('biodiv');
+                var projectOne = document.getElementById('one');
+                var projectTwo = document.getElementById('two');
+                var projectThree = document.getElementById('three');
+                var projectFour = document.getElementById('four');
+                about.classList.add('hide');
+                projectOne.classList.add('hide');
+                projectTwo.classList.add('hide');
+                projectThree.classList.add('hide');
+                projectFour.classList.add('hide');
+                console.log(about);
+                var bio = document.getElementById('bio');
+                var pOne = document.getElementById('p1');
+                var pTwo = document.getElementById('p2');
+                var pThree = document.getElementById('p3');
+                var pFour = document.getElementById('p4');
+                bio.addEventListener("click", function(){
+                  projectOne.style.opacity = '0';
+                  projectTwo.style.opacity = '0';
+                  projectThree.style.opacity = '0';
+                  projectFour.style.opacity = '0';
+                  if (about.classList.contains('hide')) {
+                    about.classList.remove('hide');
+                    projectOne.classList.add('hide');
+                    projectTwo.classList.add('hide');
+                    projectThree.classList.add('hide');
+                    projectFour.classList.add('hide');
+                  }
+                  var style = window.getComputedStyle(about);
+                  var opacity = style.getPropertyValue('opacity')
 
+                  if (opacity == 0) about.style.opacity = '1';
+                  else about.style.opacity = '0';
+                });
+                pOne.addEventListener("click", function(){
+                  about.style.opacity = '0';
+                  projectTwo.style.opacity = '0';
+                  projectThree.style.opacity = '0';
+                  projectFour.style.opacity = '0';
+                  if (projectOne.classList.contains('hide')) {
+                    projectOne.classList.remove('hide');
+                    about.classList.add('hide');
+                    projectTwo.classList.add('hide');
+                    projectThree.classList.add('hide');
+                    projectFour.classList.add('hide');
+                  }
+                  var style = window.getComputedStyle(projectOne);
+                  var opacity = style.getPropertyValue('opacity')
+                  console.log(projectOne);
+                  if (opacity == 0) projectOne.style.opacity = '1';
+                  else projectOne.style.opacity = '0';
+                });
+                pTwo.addEventListener("click", function(){
+                  projectOne.style.opacity = '0';
+                  projectThree.style.opacity = '0';
+                  projectFour.style.opacity = '0';
+                  about.style.opacity = '0';
+                  if (projectTwo.classList.contains('hide')) {
+                    projectTwo.classList.remove('hide');
+                    about.classList.add('hide');
+                    projectOne.classList.add('hide');
+                    projectThree.classList.add('hide');
+                    projectFour.classList.add('hide');
+                  }
+                  var style = window.getComputedStyle(projectTwo);
+                  var opacity = style.getPropertyValue('opacity')
+
+                  if (opacity == 0) projectTwo.style.opacity = '1';
+                  else projectTwo.style.opacity = '0';
+                });
+                pThree.addEventListener("click", function(){
+                  projectOne.style.opacity = '0';
+                  projectTwo.style.opacity = '0';
+                  projectFour.style.opacity = '0';
+                  about.style.opacity = '0';
+                  if (projectThree.classList.contains('hide')) {
+                    projectThree.classList.remove('hide');
+                    about.classList.add('hide');
+                    projectTwo.classList.add('hide');
+                    projectOne.classList.add('hide');
+                    projectFour.classList.add('hide');
+                  }
+                  var style = window.getComputedStyle(projectThree);
+                  var opacity = style.getPropertyValue('opacity')
+
+                  if (opacity == 0) projectThree.style.opacity = '1';
+                  else projectThree.style.opacity = '0';
+                });
+                pFour.addEventListener("click", function(){
+                  projectOne.style.opacity = '0';
+                  projectThree.style.opacity = '0';
+                  projectTwo.style.opacity = '0';
+                  about.style.opacity = '0';
+                  if (projectFour.classList.contains('hide')) {
+                    projectFour.classList.remove('hide');
+                    about.classList.add('hide');
+                    projectTwo.classList.add('hide');
+                    projectThree.classList.add('hide');
+                    projectOne.classList.add('hide');
+                  }
+                  var style = window.getComputedStyle(projectFour);
+                  var opacity = style.getPropertyValue('opacity')
+
+                  if (opacity == 0) projectFour.style.opacity = '1';
+                  else projectFour.style.opacity = '0';
+                });
+              });
+            </script>
+          </div>
           <div class="clearfix mb-4 py-1">
-            <p class="h4 lh-condensed font-smoothing">{{ site.description }}</p>
-            <div class="col-1 sm-width-full border-top-thick">
+            <div class="col-4 sm-width-full left border-top-thin">
+
+              <div class="table">
+                <div id="bio" class="inline-block mt-3 mr-1">
+                  {% include dot-accent-bio.html %}
+                </div>
+                <div id="p1" class="inline-block mt-3 mr-1">
+                  {% include dot-accent-project1.html %}
+                </div>
+                <div id="p2" class="inline-block mt-3 mr-1">
+                  {% include dot-accent-project2.html %}
+                </div>
+                <div id="p3" class="inline-block mt-3 mr-1">
+                  {% include dot-accent-project3.html %}
+                </div>
+                <div id="p4" class="inline-block mt-3 mr-1">
+                  {% include dot-accent-project4.html %}
+                </div>
+              </div>
+              <!-- Set site description in config.yml -->
+
+            </div>
+
+            <div class="col-4 sm-width-full left border-top-thin mt-3 mt-lg-0 ml-lg-4 table">
+                <div class="inline-block mt-3 mr-1">
+                  {% include dot-accent.html %}
+                </div>
+                <div class="inline-block mt-3 mr-1">
+                  {% include {{ site.social_link | default: "twitter" }}.html %}
+                </div>
+                <div class="inline-block mt-3 mr-1">
+                  {% include linkedin.html %}
+                </div>
+                <div class="inline-block mt-3">
+                  {% include github.html %}
+                </div>
             </div>
           </div>
 
         </div>
       </header>
-
-      <div class="container mx-auto px-2 py-2">
-        {% for post in site.posts %}
-          {% include post_block.html %}
-        {% endfor %}
-      </div>
-
+      {% include footer.html %}
     </div>
 
-    {% include footer.html %}
+
 
   </body>
 
