@@ -162,3 +162,68 @@ a:hover {
 #main {
   margin-bottom: 0px;
 }
+
+.clickable {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.clickable:hover {
+  fill: white;
+}
+
+.clickable-white {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.clickable-white:hover {
+  fill: $red;
+}
+
+@media only screen and (max-width: 880px) {
+    .responsive-bio {
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .responsive-bio {
+        width: 600px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .responsive-bio {
+        width: 550px;
+    }
+    .responsive-text {
+      width: 540px !important;
+      border: none !important;
+    }
+    #bio-pic {
+      float: none;
+      margin-left: 0;
+    }
+    #big-description {
+      margin-bottom: 10px;
+    }
+    #big-title {
+      padding-top: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 555px) {
+    .responsive-text {
+        width: 405px !important;
+    }
+}
+
+@media only screen and (max-width: 405px) {
+    .responsive-text {
+        width: 305px !important;
+    }
+}
+
+.general-assembly {
+  width: 20px;
+}
